@@ -81,4 +81,47 @@ img {
   display: grid;
   grid-template-areas: "kiri kanan";
   grid-template-columns: 1fr 1fr;
+  box-sizing: border-box;
+  align-items: center;
+  height: 100%;
+}
+
+.container-body .kiri {
+  grid-area: kiri;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.kiri h2 {
+  color: aqua;
+  font-size: 1.9em;
+}
+
+.kiri h1 {
+  box-sizing: border-box;
+  font-size: 3.4em;
+  font-weight: bold;
+}
+
+.kiri .subtitle {
+  box-sizing: border-box;
+  padding-top: 50px;
+}
+
+.container-body .kanan {
+  grid-area: kanan;
+}
+
+@media screen and (max-width: 675px) {
+  .container-body {
+    grid-template-areas:
+      "kiri"
+      "kanan";
+    grid-template-columns: 1fr;
+  }
+
+  .container-body .kiri {
+    padding: 0px;
+    font-size: 0.9em;
+  }
 }
