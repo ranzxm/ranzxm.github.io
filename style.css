@@ -103,6 +103,20 @@ img {
   font-weight: bold;
 }
 
+.kiri .contact-top {
+  margin-top: 20px;
+}
+
+.kiri .contact-top img {
+  width: 50px;
+  opacity: 70%;
+  transition: 0.3s ease-in-out;
+}
+
+.kiri .contact-top img:hover {
+  opacity: 100%;
+}
+
 .kiri .subtitle {
   box-sizing: border-box;
   padding-top: 50px;
