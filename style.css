@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: white;
+  font-family: "Sen", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  box-sizing: border-box;
+  display: flex;
+  height: 100vh;
+}
+
+.navbar {
+  background-color: rgb(61, 61, 61);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+
+  /* box shadow area*/
+  box-shadow: 10px 5px 13px -4px rgba(0, 0, 0, 0.44);
+  -webkit-box-shadow: 10px 5px 13px -4px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: 10px 5px 13px -4px rgba(0, 0, 0, 0.44);
+  /* box shadow area */
+}
+
+.my-logo img {
+  top: 5px;
+  left: 5px;
+  position: absolute;
+  width: 60px;
+}
+
+.navbar ul {
+}
+
+.navbar ul li a {
+  display: inline-block;
+  margin: 10px auto;
+  padding: 12px;
+  width: 100%;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: #ddd;
+  font-weight: bold;
+  transition: 0.5s ease-in-out;
+  font-size: 0.8em;
+}
+
+.navbar ul li a:hover {
+  color: white;
+  background-color: rgb(74, 74, 74);
+}
+
+.body {
+  width: 100%;
+  background-color: #333;
+  height: 100vh;
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.body::-webkit-scrollbar {
+  display: none;
+}
+
+.container-body {
+  display: grid;
+  grid-template-areas: "kiri kanan";
+  grid-template-columns: 1fr 1fr;
+}
