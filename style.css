@@ -83,6 +83,8 @@ img {
   overflow: auto;
   box-sizing: border-box;
   padding: 15px;
+  display: flex;
+  justify-content: center;
 }
 
 .body::-webkit-scrollbar {
@@ -90,6 +92,7 @@ img {
 }
 
 .container-body {
+  width: 90%;
   display: grid;
   grid-template-areas: "kiri kanan";
   grid-template-columns: 1fr 1fr;
@@ -166,12 +169,66 @@ img {
   }
 }
 
+/* skills page */
+
+.container-skills {
+  width: 90%;
+  margin: 30px auto;
+  box-sizing: border-box;
+}
+
+.container-skills .title h1 {
+  text-align: center;
+}
+
+.list-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center !important;
+  transition: 1s ease-in-out;
+  box-sizing: border-box;
+}
+
+.card-skills {
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: rgb(39, 39, 39);
+  margin: 10px 10px;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.4s ease-in-out;
+}
+
+.card-skills:hover {
+  background-color: rgb(35, 35, 35);
+}
+
+.card-skills:hover > img {
+  width: 120px;
+}
+
+.card-skills img {
+  transition: 0.4s ease-in-out;
+  width: 100px;
+  border-radius: 20px;
+}
+
+.card-skills h5 {
+  color: #ddd;
+  font-size: 0.7em;
+  margin-top: 10px;
+}
+
+/*  */
+
 @media screen and (max-width: 675px) {
   .container-body {
     grid-template-areas:
       "kanan"
       "kiri";
     grid-template-columns: 1fr;
+
+    width: 100%;
   }
 
   .container-body .kiri {
