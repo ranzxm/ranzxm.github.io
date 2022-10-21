@@ -123,19 +123,36 @@ img {
 }
 
 .container-body .kanan {
+  width: 100%;
+  display: flex;
   grid-area: kanan;
+  justify-content: center;
+  transition: 0.5s ease-in-out;
+}
+
+.container-body .kanan img {
+  width: 450px;
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 675px) {
   .container-body {
     grid-template-areas:
-      "kiri"
-      "kanan";
+      "kanan"
+      "kiri";
     grid-template-columns: 1fr;
   }
 
   .container-body .kiri {
     padding: 0px;
     font-size: 0.9em;
+  }
+
+  .container-body .kanan {
+    margin-bottom: 40px;
+  }
+
+  .container-body .kanan img {
+    width: 250px;
   }
 }
