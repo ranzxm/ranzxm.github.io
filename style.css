@@ -25,7 +25,7 @@ img {
   background-color: rgb(61, 61, 61);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   z-index: 1;
 
@@ -64,6 +64,18 @@ img {
   background-color: rgb(74, 74, 74);
 }
 
+.navbar ul li a span {
+  font-size: 0.7em;
+  position: absolute;
+}
+
+.navbar .copyright p {
+  font-size: 0.6em;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 5px auto;
+}
+
 .body {
   width: 100%;
   background-color: #333;
@@ -97,7 +109,6 @@ img {
   font-size: 1.9em;
 }
 
-
 .kiri h1 {
   box-sizing: border-box;
   font-size: 3.4em;
@@ -127,7 +138,7 @@ img {
   width: 100%;
   display: flex;
   grid-area: kanan;
-  justify-content: center;
+  justify-content: end;
   transition: 0.5s ease-in-out;
 }
 
@@ -151,9 +162,10 @@ img {
 
   .container-body .kanan {
     margin-bottom: 40px;
+    justify-content: center;
   }
 
   .container-body .kanan img {
-    width: 250px;
+    width: 230px;
   }
 }
