@@ -262,6 +262,7 @@ img {
   font-size: 0.8em;
   width: 40%;
   transition: 0.5s ease-in-out;
+  border-radius: 5px;
 }
 .form form textarea {
   font-family: "sen", Arial, Helvetica, sans-serif;
@@ -274,9 +275,14 @@ img {
   font-size: 0.8em;
   width: 40%;
   transition: 0.5s ease-in-out;
+  border-radius: 5px;
 }
 
 .form form input:focus {
+  outline: 1px solid cyan;
+}
+
+.form form textarea:focus {
   outline: 1px solid cyan;
 }
 
