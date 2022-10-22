@@ -76,6 +76,10 @@ img {
   margin: 5px auto;
 }
 
+.container-copy .love {
+  cursor: pointer;
+}
+
 .body {
   width: 100%;
   background-color: #333;
@@ -219,6 +223,63 @@ img {
   margin-top: 10px;
 }
 
+/* contact page */
+
+.container-contact {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  background-color: rgb(68, 68, 68);
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: #ddd;
+  justify-content: center;
+}
+
+.container-contact .title {
+  margin-bottom: 10px;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form form > * {
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.form form input {
+  font-family: "sen", Arial, Helvetica, sans-serif;
+  outline: none;
+  background-color: #333;
+  border: none;
+  color: #ddd;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 0.8em;
+  width: 40%;
+  transition: 0.5s ease-in-out;
+}
+.form form textarea {
+  font-family: "sen", Arial, Helvetica, sans-serif;
+  outline: none;
+  background-color: #333;
+  border: none;
+  color: #ddd;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 0.8em;
+  width: 40%;
+  transition: 0.5s ease-in-out;
+}
+
+.form form input:focus {
+  outline: 1px solid cyan;
+}
+
 /*  */
 
 @media screen and (max-width: 675px) {
@@ -246,5 +307,12 @@ img {
     box-shadow: 0px 1px 125px -32px rgba(255, 255, 255, 0.75);
     -webkit-box-shadow: 0px 1px 125px -32px rgba(255, 255, 255, 0.75);
     -moz-box-shadow: 0px 1px 125px -32px rgba(255, 255, 255, 0.75);
+  }
+
+  .form form input {
+    width: 100%;
+  }
+  .form form textarea {
+    width: 100%;
   }
 }
