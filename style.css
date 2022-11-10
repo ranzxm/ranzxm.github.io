@@ -173,6 +173,18 @@ img {
   }
 }
 
+@keyframes playerPick {
+  from {
+    box-shadow: none;
+  }
+
+  to {
+    box-shadow: 0px 0px 23px 0px rgba(0, 255, 73, 0.75);
+    -webkit-box-shadow: 0px 0px 23px 0px rgba(0, 255, 73, 0.75);
+    -moz-box-shadow: 0px 0px 23px 0px rgba(0, 255, 73, 0.75);
+  }
+}
+
 /* skills page */
 
 .container-skills {
@@ -290,6 +302,193 @@ img {
   outline: 1px solid cyan;
 }
 
+/* project page */
+
+.container-project {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 40px 1fr;
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+
+.project-bar {
+  width: 100%;
+}
+
+.project-bar ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.project-bar ul li {
+  position: relative;
+  color: #ddd;
+  box-sizing: border-box;
+  margin-left: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: rgb(80, 80, 80);
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.project-bar ul li .badge {
+  border-radius: 2px;
+  box-sizing: border-box;
+  position: absolute;
+  font-size: 0.6em;
+  font-weight: bold;
+  padding: 3px;
+  background-color: red;
+  top: -10px;
+  right: -5px;
+  opacity: 80%;
+  transition: 0.5s ease-in-out;
+}
+
+.badge:hover {
+  color: white;
+}
+
+.project-bar ul .non-active {
+  cursor: not-allowed;
+  background-color: transparent;
+}
+
+.project-content {
+  position: relative;
+  border-radius: 10px;
+  margin-top: 15px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(73, 73, 73);
+}
+
+.project-content .suit-jawa {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  position: relative;
+}
+
+.player,
+.computer {
+  color: #ddd;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 6px;
+  background-color: rgb(109, 109, 109);
+}
+
+.player > *,
+.computer > * {
+  margin-bottom: 10px;
+}
+
+.player ul {
+  display: flex;
+}
+
+.player ul li {
+  margin: 10px;
+  opacity: 80%;
+}
+
+.player ul li img:hover {
+  border-radius: 50%;
+  animation-name: playerPick;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 100%;
+  cursor: pointer;
+}
+
+.computer .img-computer {
+  width: 150px;
+}
+
+.semut,
+.orang,
+.gajah,
+.img-computer {
+  width: 100px;
+  transition: 0.5s ease;
+}
+
+.info-match {
+  box-sizing: border-box;
+  position: absolute;
+  height: 30px;
+  border-radius: 5px;
+  border: 3px solid rgb(109, 109, 109);
+  background-color: rgb(73, 73, 73);
+  width: 30%;
+  top: 197px;
+  left: 140px;
+  text-align: center;
+}
+
+.score-player {
+  top: 5px;
+  left: 5px;
+  position: absolute;
+  border: 2px solid none;
+  border-radius: 4px;
+  color: #ddd;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(73, 73, 73);
+}
+.score-computer {
+  position: absolute;
+  top: 222px;
+  left: 5px;
+  border: 2px solid none;
+  border-radius: 4px;
+  color: #ddd;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(73, 73, 73);
+}
+
+.reset-score {
+  color: #ddd;
+  position: absolute;
+  padding: 3px;
+  font-size: 0.9em;
+  font-family: "Sen", Arial, Helvetica, sans-serif;
+  background-color: #333;
+  border: none;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* end of project page */
+
+/* css universal */
+
+.list-none {
+  list-style-type: none;
+}
+
+/* end of css universal */
+
 /*  */
 
 @media screen and (max-width: 675px) {
@@ -324,5 +523,35 @@ img {
   }
   .form form textarea {
     width: 100%;
+  }
+
+  .player,
+  .computer {
+    padding: 10px;
+  }
+
+  .semut,
+  .orang,
+  .gajah {
+    width: 70px;
+  }
+
+  .player ul li {
+    margin: 2px;
+  }
+
+  .computer .img-computer {
+    width: 120px;
+  }
+
+  .score-computer {
+    top: 157px;
+  }
+
+  .info-match {
+    top: 131px;
+    left: 84px;
+    font-size: 0.7em;
+    line-height: 20px;
   }
 }
