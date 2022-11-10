@@ -479,6 +479,18 @@ img {
   cursor: pointer;
 }
 
+.inspired-by {
+  position: absolute;
+  font-size: 0.7em;
+  bottom: 5px;
+  left: 5px;
+}
+
+.inspired-by a {
+  color: #ddd;
+  text-decoration: none;
+}
+
 /* end of project page */
 
 /* css universal */
