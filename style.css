@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
-
+/* universal css */
 * {
   margin: 0;
   padding: 0;
@@ -15,13 +15,48 @@ img {
   width: 100%;
 }
 
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #636363 #3f3f3f;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #3f3f3f;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #243335;
+    border-radius: 14px;
+    border: 4px none #ffffff;
+  }
+
+/* end of universal css */
+
+/* universal class css */
+.hidden {
+  display: none !important;
+}
+
+.active {
+  background-color: rgba(148, 148, 148, 0.20);
+}
+
+/* end of universal class css */
+
 .container {
   box-sizing: border-box;
   display: flex;
   height: 100vh;
 }
 
-.navbar {
+nav {
   background-color: rgb(61, 61, 61);
   display: flex;
   align-items: center;
@@ -43,10 +78,7 @@ img {
   width: 60px;
 }
 
-.navbar ul {
-}
-
-.navbar ul li a {
+nav ul li a {
   display: inline-block;
   margin: 10px auto;
   padding: 12px;
@@ -59,17 +91,17 @@ img {
   font-size: 0.8em;
 }
 
-.navbar ul li a:hover {
+nav ul li a:hover {
   color: white;
   background-color: rgb(74, 74, 74);
 }
 
-.navbar ul li a span {
+nav ul li a span {
   font-size: 0.7em;
   position: absolute;
 }
 
-.navbar .copyright p {
+nav .copyright p {
   font-size: 0.6em;
   box-sizing: border-box;
   text-align: center;
@@ -80,7 +112,8 @@ img {
   cursor: pointer;
 }
 
-.body {
+main {
+  position: relative;
   width: 100%;
   background-color: #333;
   height: 100vh;
@@ -91,18 +124,45 @@ img {
   justify-content: center;
 }
 
-.body::-webkit-scrollbar {
+main::-webkit-scrollbar {
   display: none;
 }
 
 .container-body {
+  position: absolute;
   width: 90%;
   display: grid;
   grid-template-areas: "kiri kanan";
   grid-template-columns: 1fr 1fr;
   box-sizing: border-box;
   align-items: center;
-  height: 100%;
+  height: 95%;
+  background-color: rgb(63, 63, 63);
+  padding: 30px;
+  border-radius: 10px;
+  margin: inherit !important;
+  position: absolute;
+  overflow: auto;
+
+}
+
+.outSlideRightHome {
+  right: 65px;
+  animation-name: slideAnimationHomeOut;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+
+}
+
+.inSlideRightHome {
+  left: -1500px;
+  animation-name: slideAnimationHome;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.container-body::-webkit-scrollbar {
+  display: none;
 }
 
 .container-body .kiri {
@@ -162,6 +222,23 @@ img {
   animation-fill-mode: forwards;
 }
 
+
+/* bagian keyframe */
+@keyframes slideAnimationHome {
+
+  to {
+    left : 64px;
+  }
+}
+@keyframes slideAnimationHomeOut {
+
+  to {
+    right : -1500px;
+  }
+}
+
+
+
 @keyframes imghover {
   from {
     box-shadow: none;
@@ -188,9 +265,19 @@ img {
 /* skills page */
 
 .container-skills {
+  position: absolute;
   width: 90%;
-  margin: 30px auto;
+  height: 94%;
+  margin: 2px auto;
   box-sizing: border-box;
+  background-color: rgb(63, 63, 63);
+  overflow: auto;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.container-skills::-webkit-scrollbar {
+  display: none;
 }
 
 .container-skills .title h1 {
@@ -241,6 +328,7 @@ img {
   display: flex;
   flex-direction: column;
   width: 90%;
+  height: 95%;
   background-color: rgb(68, 68, 68);
   padding: 20px;
   box-sizing: border-box;
@@ -248,6 +336,7 @@ img {
   color: #ddd;
   justify-content: center;
   overflow: auto;
+  position: absolute;
 }
 
 .container-contact::-webkit-scrollbar {
@@ -309,7 +398,8 @@ img {
   justify-content: center;
   grid-template-rows: 40px 1fr;
   grid-template-columns: 1fr;
-  width: 100%;
+  width: 90%;
+  position: absolute;
 }
 
 .project-bar {
@@ -364,6 +454,7 @@ img {
   border-radius: 10px;
   margin-top: 15px;
   padding: 20px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -510,7 +601,8 @@ img {
       "kiri";
     grid-template-columns: 1fr;
 
-    width: 100%;
+    width: 92%;
+    padding: 5px;
   }
 
   .container-body .kiri {
@@ -536,7 +628,6 @@ img {
   .form form textarea {
     width: 100%;
   }
-
   .player,
   .computer {
     padding: 10px;
@@ -565,5 +656,24 @@ img {
     left: 84px;
     font-size: 0.7em;
     line-height: 20px;
+  }
+
+  .container-project {
+  height: 96vh;
+  }
+
+
+  /* keyframe responsive */
+  @keyframes slideAnimationHome {
+
+    to {
+      left : 15px;
+    }
+  }
+  @keyframes slideAnimationHomeOut {
+  
+    to {
+      right : -1500px;
+    }
   }
 }
